@@ -19,9 +19,9 @@ Because the models in the architecture are the exact same as in the micromodel, 
 
 - MA Maia, IBCM Rocha, FP van der Meer (2024), [PRNNs for 3D composites, finite-strain thermoviscoelasticity, creep and fatigue](https://arxiv.org/abs/2404.17583)
 
-- MA Maia, IBCM Rocha, D Kovacevic, FP van der Meer (2024), PRNNs for micromodels including distributed cohesive damage -- **COMING SOON**
+- MA Maia, IBCM Rocha, D Kovacevic, FP van der Meer (2024), Reproducing creep and fatigue experiments in thermoplastics using PRNNs -- **COMING SOON**
 
-- N Kovacs, MA Maia, IBCM Rocha, C Furtado, PP Camanho, FP van der Meer (2024), Reproducing creep and fatigue experiments in thermoplastics using PRNNs -- **COMING SOON**
+- N Kovacs, MA Maia, IBCM Rocha, C Furtado, PP Camanho, FP van der Meer (2024), PRNNs for micromodels including distributed cohesive damage -- **COMING SOON**
 
 ## In this repository
 
@@ -34,10 +34,9 @@ The code in this repository contains a standalone demonstration of PRNNs for a 2
 
 ## Illustrated concepts
 
-- In this animation, x and x
-<img src="https://github.com/MarinaMaia2021/prnntest/blob/main/animations/matPointWRateDepAndDifProps.gif" width="75%" height="75%"/>
-
-- In this other, y and y
+- In the PRNN, the internal variables of the path and/or rate-dependent material models are used as the physics-based memory of the network. Here, we illustrate the concept considering a fictitious material point evaluated by a $J_2$ elastoplastic model (matrix), as well as the case in which the material point is evaluated by a linear elastic model (fibers). Note that for the latter, no internal variables are needed. 
 <img src="https://github.com/MarinaMaia2021/prnntest/blob/main/animations/materialPointWithAndWithoutIntVars.gif" width="75%" height="75%"/>
 
+- This time, we show how the fictitious material point with strain rate-dependency differs from the previous fictitious material point with only path-dependency. At the end, we also refer to another interesting feature to be explored in future works: the ability of the network to extrapolate to a different set of material properties without the need to retrain.
+<img src="https://github.com/MarinaMaia2021/prnntest/blob/main/animations/matPointWRateDepAndDifProps.gif" width="75%" height="75%"/>
 
